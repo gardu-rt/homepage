@@ -127,3 +127,139 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/* Header style */
+header {
+  display: flex;
+  align-items: center;
+  padding: 3vw;
+  background: linear-gradient(
+    170deg,
+    hsl(190, 55%, 40%) 70%,
+    hsl(0, 0%, 100%) 70%
+  );
+}
+
+.profile {
+  position: relative;
+  max-width: 550px;
+}
+
+.profile img {
+  width: 100%;
+  box-shadow: 5px 5px 5px hsl(0, 0%, 0%, 0.2);
+}
+
+.profile p {
+  position: absolute;
+  color: white;
+  font-size: max(50px, 5vw);
+  top: 80%;
+  transform: translateX(15%);
+}
+
+.about-me {
+  flex: 1;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.2);
+}
+
+.about-me h1 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.about-me p {
+  line-height: 30px;
+  font-size: 28px;
+  margin-bottom: 70px;
+}
+
+.social {
+  text-align: end;
+}
+
+.social img {
+  width: 32px;
+  padding-left: 16px;
+}
+
+@media (width <= 1050px) {
+  header {
+    display: block;
+    background: linear-gradient(
+      170deg,
+      hsl(190, 55%, 40%) 60%,
+      hsl(0, 0%, 100%) 60%
+    );
+  }
+
+  .profile {
+    float: left;
+    flex: none;
+    margin-right: 40px;
+  }
+
+  .about-me {
+    margin-top: 70px;
+    margin-left: 70px;
+  }
+}
+
+@media (width <= 700px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(
+      170deg,
+      hsl(190, 55%, 40%) 30%,
+      hsl(0, 0%, 100%) 30%
+    );
+  }
+
+  .profile {
+    margin: 0 auto;
+  }
+
+  .profile img {
+    box-shadow: none;
+  }
+
+  .about-me {
+    margin: 0;
+    box-shadow: none;
+  }
+  .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+  .social img {
+    padding: 0;
+  }
+}
+
+@media (width <= 440px) {
+  header {
+    background: linear-gradient(
+      170deg,
+      hsl(190, 55%, 40%) 20%,
+      hsl(0, 0%, 100%) 20%
+    );
+  }
+  .profile p {
+    right: 50%;
+    top: 65%;
+    transform: translateX(10%);
+  }
+
+  .about-me p {
+    text-align: justify;
+  }
+}
